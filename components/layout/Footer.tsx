@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Logo from '@/components/ui/Logo';
 
 interface FooterLinkGroup {
   title: string;
@@ -36,9 +37,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 w-full">
           {/* Brand Column */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2 text-white">
-              <span className="material-symbols-outlined text-primary">local_fire_department</span>
-              <h3 className="text-lg font-bold">GoSimple Store</h3>
+            <Link href="/" className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity">
+              <Logo size="md" showText={false} animated={false} />
+              <h3 className="text-lg font-bold">GoSimple</h3>
             </Link>
             <p className="text-text-muted text-sm leading-relaxed">
               This E-store designed for testing.

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Logo from '@/components/ui/Logo';
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -33,12 +34,12 @@ export default function AuthLayout({ children, title, subtitle }: AuthLayoutProp
         
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-between p-12 w-full">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="material-symbols-outlined text-white text-xl">store</span>
+        {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Logo size="sm" showText={false} animated={false} />
+            <div>
+              <span className="text-lg font-bold text-white">GoSimple</span>
             </div>
-            <span className="text-2xl font-bold text-white">GoSimple</span>
           </Link>
 
           {/* Centered Message */}
@@ -84,11 +85,9 @@ export default function AuthLayout({ children, title, subtitle }: AuthLayoutProp
       <div className="w-full lg:w-1/2 flex flex-col">
         {/* Mobile Header */}
         <div className="lg:hidden p-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="material-symbols-outlined text-white text-xl">store</span>
-            </div>
-            <span className="text-2xl font-bold text-white">GoSimple</span>
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Logo size="sm" showText={false} animated={false} />
+            <span className="text-xl font-bold text-white">GoSimple</span>
           </Link>
           <Link 
             href="/"

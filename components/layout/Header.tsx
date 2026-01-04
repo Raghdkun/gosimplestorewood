@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Logo from '@/components/ui/Logo';
 import CartDropdown from './CartDropdown';
 import ProfileDropdown from './ProfileDropdown';
 import MobileNav from './MobileNav';
@@ -25,11 +26,12 @@ export default function Header() {
     <header className="glass-header sticky top-0 z-50 flex items-center justify-between whitespace-nowrap px-6 lg:px-10 py-4 transition-all duration-300">
       <div className="flex items-center gap-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-4 text-white group">
-          <div className="size-8 text-primary flex items-center justify-center transition-transform group-hover:rotate-12">
-            <span className="material-symbols-outlined text-[32px]">local_fire_department</span>
+        <Link href="/" className="flex items-center gap-3 group hover:opacity-80 transition-opacity">
+          <Logo size="sm" showText={false} animated={false} />
+          <div className="hidden sm:block">
+            <h2 className="text-white text-lg font-bold leading-tight tracking-tight">GoSimple</h2>
+            <p className="text-text-muted text-xs font-medium">Handcrafted</p>
           </div>
-          <h2 className="text-white text-xl font-bold leading-tight tracking-tight">GoSimple Store</h2>
         </Link>
 
         {/* Desktop Navigation */}
