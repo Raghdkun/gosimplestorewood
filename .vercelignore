@@ -1,0 +1,7 @@
+# Ignore files not needed for deployment
+.git
+.gitignore
+README.md
+node_modules
+.next
+.env*.local
