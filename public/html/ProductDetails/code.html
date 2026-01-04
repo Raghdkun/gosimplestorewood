@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Detail Page - Burnt &amp; Glass</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec6d13",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                        "wood-dark": "#2d2016",
+                        "glass-dark": "rgba(45, 32, 22, 0.6)",
+                        "glass-border": "rgba(255, 255, 255, 0.08)",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221810; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #483323; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ec6d13; 
+        }
+        
+        /* Glassmorphism utility */
+        .glass-panel {
+            background: rgba(45, 32, 22, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-white">
+<!-- Header -->
+<header class="sticky top-0 z-50 glass-panel border-b border-[#483323]">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-3 text-white group" href="#">
+<div class="size-8 text-primary transition-transform group-hover:rotate-12">
+<span class="material-symbols-outlined text-3xl">local_fire_department</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Burnt &amp; Glass</h2>
+</a>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium text-white/80 hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-sm font-medium text-white/80 hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-sm font-medium text-white/80 hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium text-white/80 hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex relative group">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-white/40 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="bg-[#483323]/50 border border-transparent focus:border-primary/50 text-white text-sm rounded-xl pl-10 pr-4 py-2.5 outline-none w-64 transition-all placeholder:text-white/30 focus:bg-[#483323]" placeholder="Search..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="relative p-2.5 rounded-xl text-white/80 hover:bg-[#483323] hover:text-white transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full animate-pulse"></span>
+</button>
+<button class="p-2.5 rounded-xl text-white/80 hover:bg-[#483323] hover:text-white transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-[1440px] mx-auto px-6 lg:px-10 py-8 lg:py-12">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-sm text-[#c9a992] mb-8">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-xs opacity-50">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Furniture</a>
+<span class="material-symbols-outlined text-xs opacity-50">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Chairs</a>
+<span class="material-symbols-outlined text-xs opacity-50">chevron_right</span>
+<span class="text-white font-medium">Artisan Walnut Chair</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-20">
+<!-- Product Gallery (Left Column) -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden group bg-wood-dark border border-glass-border">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Modern walnut wooden chair with dark upholstery in a minimal room" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtWuDTv6IobFr8lojM678tUHv5b3Vab7A4GwePD3cUYCiwBdrXE2-sYNm69IbMvlg2N3HsoVkkSmROOp1R3WQ3HVX1_eqHYrosPsf0LHIwV5-Mm0icKxFDCnIz4gAHDxDl7IXKUze80GvKRX94VZP9FluVaogN1XwWFOyiKn_btUqaOz6VtcIqPOlH6xUcGAtz7AH55QpM3yI-NGDKAHemz5-a1xEW5ALPiZz365SJ7IooQnLnryGijf19GRQ-58EPujRmmecMDuSw');">
+</div>
+<!-- Gallery Controls Overlay -->
+<div class="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="size-10 rounded-full glass-panel flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 rounded-full glass-panel flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="absolute top-4 right-4">
+<button class="size-10 rounded-full glass-panel flex items-center justify-center text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<!-- Thumbnails -->
+<div class="grid grid-cols-4 gap-4">
+<button class="aspect-square rounded-xl overflow-hidden border-2 border-primary relative">
+<img class="w-full h-full object-cover" data-alt="Front view of walnut chair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_fh5v4zJ5CrAciVJ5IDhlbAtxc4d84zYJ1qM2C2rzJpX8L8D-BZtdi_jvWVL1DhBZyG_POB1KtHww7OXbzsQPSO3ZocGmWvW4uqhpo7IwHE7FT3As-Xp11v_OYpSIW6vkwHPFqmsZkizEdRvyn85r1Xtw0QH6Ck7e-kpbXrLrB8D9Th5u3ctLNtocdV_9i76ngyylyIyfQpZorZ_R_8hXyi8bSyS2BvyhqBqudStZFYdQS1aUZbsXnZSI032OATegn1ckfFcZ22BU"/>
+</button>
+<button class="aspect-square rounded-xl overflow-hidden border-2 border-transparent hover:border-white/20 relative opacity-70 hover:opacity-100 transition-all">
+<img class="w-full h-full object-cover" data-alt="Side profile of walnut chair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2yWwZbZb3J6LiMDpyN9ziF8VOdocCw9WpIGOWI5O5NAxSaBmmNnZGPvUf4hFbs2O3SBwcSkxQKTOzUGy3whORBXxokISgmnr56YHELLJw7JuZImDUfJKd1AS1Yq9BgcaSwprW4tg0kkaZkmEGpOM850jaIQI1GscVB00KAF2BEy7Jr_cvHD5OXja82DDeTbCB0tFCj1FMbw89TrGPtluTEK2V-6fKKfT9Yrls2PJjf3Ph8YCzLDKbEyCpZFIQvA1ntl2lUnomaGXg"/>
+</button>
+<button class="aspect-square rounded-xl overflow-hidden border-2 border-transparent hover:border-white/20 relative opacity-70 hover:opacity-100 transition-all">
+<img class="w-full h-full object-cover" data-alt="Detail of wood grain texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa6FZuISFvkMU1e5EEH3UCpP806xukrsfXDlZvW-uaBh47SVHZRQSJgNpoYK4QyRAXAezboDm0cE2kAyFS_ics8Vld73YY6uu3tuw3wcYdTy8GRSnsZwg5UORwx4tXFDSa-TXT7MWFKWU-UQR0KBoONhp38AOoqtD1-AQkmrnlu8wNpL0AWCHhPSdJ34YCPeAGQsAmqYEVha4j8eGWlUPPQL9psZcXsMAEyywZ4lPkyAUHd9BMJs-v6trdaNyL_u966DB-PCtrgdNg"/>
+</button>
+<button class="aspect-square rounded-xl overflow-hidden border-2 border-transparent hover:border-white/20 relative opacity-70 hover:opacity-100 transition-all group">
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-colors">
+<span class="material-symbols-outlined text-white">play_circle</span>
+</div>
+<img class="w-full h-full object-cover" data-alt="Lifestyle shot of chair in living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgg4gkbNRAwdAiMuW4kAy42-UKyFQhnql1ZygF5eSrStbKPeuZYL_aDDDuavSwufmTEEYKeksOOtGRVLZUqtROPNGdJHpIYlpZHtpHj8IAX5_RzfpbAErBchc-6iCWq3rvYmwFilYiQ5LOWJkePfQxIOjH_Zaad2WQ6DpXJ-sBmdgXbh-mO1__3OFX5_qeGTX7ZLWS52QMP7X7kC_cNOXoBq6lExQ-K-vt-oa24vyRRmKym-86pfizTCNK9kYDeTGBmLhkSkYlZAdT"/>
+</button>
+</div>
+</div>
+<!-- Product Details (Right Column - Sticky) -->
+<div class="lg:col-span-5 relative">
+<div class="sticky top-28 flex flex-col gap-8">
+<!-- Header Info -->
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-primary/20 text-primary px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider border border-primary/20">Best Seller</span>
+<span class="text-[#c9a992] text-sm">In Stock</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-bold text-white mb-2 leading-tight">Artisan Walnut Chair</h1>
+<div class="flex items-center gap-4 mb-6">
+<h2 class="text-2xl font-bold text-primary">$249.00</h2>
+<div class="w-px h-5 bg-white/10"></div>
+<div class="flex items-center gap-1">
+<div class="flex text-primary text-sm">
+<span class="material-symbols-outlined text-lg fill-current">star</span>
+<span class="material-symbols-outlined text-lg fill-current">star</span>
+<span class="material-symbols-outlined text-lg fill-current">star</span>
+<span class="material-symbols-outlined text-lg fill-current">star</span>
+<span class="material-symbols-outlined text-lg">star_half</span>
+</div>
+<span class="text-sm text-white/60 ml-1 underline decoration-white/30 underline-offset-4 cursor-pointer hover:text-white transition-colors">120 Reviews</span>
+</div>
+</div>
+<p class="text-white/70 leading-relaxed font-light">
+                            Handcrafted from sustainable walnut, this chair blends mid-century aesthetics with modern comfort. The burnt finish adds a unique, rustic character to every piece.
+                        </p>
+</div>
+<div class="h-px bg-gradient-to-r from-white/10 to-transparent"></div>
+<!-- Variants -->
+<div class="flex flex-col gap-6">
+<!-- Wood Finish -->
+<div class="space-y-3">
+<span class="text-sm font-medium text-white block">Finish</span>
+<div class="flex gap-3">
+<label class="cursor-pointer group">
+<input checked="" class="peer sr-only" name="finish" type="radio"/>
+<div class="size-10 rounded-full bg-[#4A3728] ring-2 ring-offset-2 ring-offset-[#221810] ring-transparent peer-checked:ring-primary transition-all shadow-lg"></div>
+<span class="block text-xs text-center mt-1 text-white/40 group-hover:text-white/80 peer-checked:text-primary transition-colors">Dark</span>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="finish" type="radio"/>
+<div class="size-10 rounded-full bg-[#8B5A2B] ring-2 ring-offset-2 ring-offset-[#221810] ring-transparent peer-checked:ring-primary transition-all shadow-lg"></div>
+<span class="block text-xs text-center mt-1 text-white/40 group-hover:text-white/80 peer-checked:text-primary transition-colors">Med</span>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="finish" type="radio"/>
+<div class="size-10 rounded-full bg-[#C19A6B] ring-2 ring-offset-2 ring-offset-[#221810] ring-transparent peer-checked:ring-primary transition-all shadow-lg"></div>
+<span class="block text-xs text-center mt-1 text-white/40 group-hover:text-white/80 peer-checked:text-primary transition-colors">Light</span>
+</label>
+</div>
+</div>
+<!-- Upholstery -->
+<div class="space-y-3">
+<span class="text-sm font-medium text-white block">Upholstery</span>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-lg bg-[#483323] border border-primary text-primary text-sm font-medium transition-all shadow-[0_0_15px_rgba(236,109,19,0.2)]">Charcoal Fabric</button>
+<button class="px-4 py-2 rounded-lg bg-[#2d2016] border border-white/10 hover:border-white/30 text-white/70 hover:text-white text-sm font-medium transition-all">Cognac Leather</button>
+<button class="px-4 py-2 rounded-lg bg-[#2d2016] border border-white/10 hover:border-white/30 text-white/70 hover:text-white text-sm font-medium transition-all">Olive Velvet</button>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="glass-panel p-4 rounded-xl flex flex-col sm:flex-row gap-4 items-center mt-2">
+<!-- Quantity -->
+<div class="flex items-center bg-[#221810] rounded-lg border border-white/10 p-1">
+<button class="size-10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<input class="w-10 text-center bg-transparent border-none text-white font-medium focus:ring-0 p-0" readonly="" type="text" value="1"/>
+<button class="size-10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+<!-- Add to Cart -->
+<button class="flex-1 w-full bg-primary hover:bg-[#ff7a1c] text-white font-bold py-3.5 px-6 rounded-lg transition-all shadow-[0_0_20px_rgba(236,109,19,0.4)] flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined group-hover:-translate-y-0.5 transition-transform">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+<!-- Features/Accordion -->
+<div class="divide-y divide-white/10">
+<details class="group py-4" open="">
+<summary class="flex justify-between items-center font-medium cursor-pointer list-none text-white hover:text-primary transition-colors">
+<span>Description</span>
+<span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-white/60 text-sm mt-3 leading-relaxed group-open:animate-fadeIn">
+                                Every Artisan Walnut Chair is unique, showcasing the natural grain of premium solid wood. The burnt wood finish is achieved through the traditional Shou Sugi Ban technique, ensuring durability and resistance to elements while providing a deep, rich aesthetic.
+                            </div>
+</details>
+<details class="group py-4">
+<summary class="flex justify-between items-center font-medium cursor-pointer list-none text-white hover:text-primary transition-colors">
+<span>Dimensions</span>
+<span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-white/60 text-sm mt-3 leading-relaxed">
+<ul class="list-disc pl-4 space-y-1">
+<li>Height: 32 inches</li>
+<li>Width: 24 inches</li>
+<li>Depth: 26 inches</li>
+<li>Seat Height: 18 inches</li>
+</ul>
+</div>
+</details>
+<details class="group py-4">
+<summary class="flex justify-between items-center font-medium cursor-pointer list-none text-white hover:text-primary transition-colors">
+<span>Shipping &amp; Returns</span>
+<span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-white/60 text-sm mt-3 leading-relaxed">
+                                Free shipping on all orders over $500. Returns accepted within 30 days of delivery.
+                            </div>
+</details>
+</div>
+</div>
+</div>
+</div>
+<!-- Full Width Sections Below Fold -->
+<!-- Ratings & Reviews -->
+<section class="mt-20 lg:mt-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+<div>
+<h3 class="text-2xl font-bold text-white mb-2">Customer Reviews</h3>
+<p class="text-white/50">See what our customers have to say about the Artisan Walnut Chair.</p>
+</div>
+<button class="px-5 py-2.5 rounded-lg border border-white/20 text-white hover:bg-white hover:text-background-dark transition-all text-sm font-medium">
+                    Write a Review
+                </button>
+</div>
+<!-- Rating Summary Component -->
+<div class="glass-panel p-8 rounded-2xl mb-10">
+<div class="flex flex-wrap items-center gap-x-12 gap-y-8">
+<div class="flex flex-col gap-1 items-center md:items-start min-w-[150px]">
+<span class="text-6xl font-black text-white tracking-tighter">4.8</span>
+<div class="flex gap-0.5 text-primary">
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<p class="text-white/50 text-sm mt-1">Based on 120 reviews</p>
+</div>
+<div class="flex-1 w-full grid grid-cols-[20px_1fr_40px] gap-x-4 gap-y-2 items-center text-sm">
+<span class="text-white text-right">5</span>
+<div class="h-2 w-full bg-[#483323] rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full"></div>
+</div>
+<span class="text-white/50">75%</span>
+<span class="text-white text-right">4</span>
+<div class="h-2 w-full bg-[#483323] rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[15%] rounded-full"></div>
+</div>
+<span class="text-white/50">15%</span>
+<span class="text-white text-right">3</span>
+<div class="h-2 w-full bg-[#483323] rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[5%] rounded-full"></div>
+</div>
+<span class="text-white/50">5%</span>
+<span class="text-white text-right">2</span>
+<div class="h-2 w-full bg-[#483323] rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[3%] rounded-full"></div>
+</div>
+<span class="text-white/50">3%</span>
+<span class="text-white text-right">1</span>
+<div class="h-2 w-full bg-[#483323] rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[2%] rounded-full"></div>
+</div>
+<span class="text-white/50">2%</span>
+</div>
+</div>
+</div>
+<!-- Review Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Review 1 -->
+<div class="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-4 mb-4">
+<img alt="User Avatar" class="size-10 rounded-full border border-white/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_3-g6XxyajGifbLAw-erF5cIgxfJanYQaGHaWqWYlHMc5BVL7_Ih5EM3bXFyJVuuKmhXRh5r9odPby8B5pfQ3P5_jw93JlNIONxbAZeN6DODnfQwS88Hz-OOMwhuGkwasn10lV5pANznXtXKsr90mZbEljyXwCNWZw_l_GBjeJin-9J-G5HKBgF1VKFPvRxcrlECBxCIJ2USlHfNO_mcdF3W_8cEA5JSsEZ2Ra54d2G5ahxktMLPCOx5R4Dyq3GwaBFuyJMZ2P0iK"/>
+<div>
+<h4 class="text-white font-medium text-sm">Sarah Jenkins</h4>
+<div class="flex text-primary text-xs">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+</div>
+</div>
+<span class="ml-auto text-xs text-white/30">2 days ago</span>
+</div>
+<p class="text-white/70 text-sm leading-relaxed">
+                        Absolutely stunning chair. The burnt wood finish is even more beautiful in person. It feels solid and very high quality. Worth every penny!
+                    </p>
+</div>
+<!-- Review 2 -->
+<div class="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-4 mb-4">
+<img alt="User Avatar" class="size-10 rounded-full border border-white/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWPjOnV0fOV4G2WxaaxjmE4Ut67xHgu3B44mFM70Za8F4fX_JNCuJ2u1hMY6Ytwzy_ber2OX_kUzL5YINxK98knOYui1Fq22v_7TgdvkIbhqt-YJwy2JkoOxsA0OUoDhR8o7o4OFrGyd899ccZZsnjOwuJzvZ7A1ZZ4abmHeHxylHVJufoF28JyvB4hRMmGeNznSasXrYx8gGnEOFy3zrk_D6rs3Sh1isWh6umUmhKbf2hDgid6ErlsCestm0Dy9QWFfHW6X3djHjv"/>
+<div>
+<h4 class="text-white font-medium text-sm">Marcus Chen</h4>
+<div class="flex text-primary text-xs">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+<span class="ml-auto text-xs text-white/30">1 week ago</span>
+</div>
+<p class="text-white/70 text-sm leading-relaxed">
+                        Great design and surprisingly comfortable for a wooden chair. The cushion is firm but supportive. Shipping was fast too.
+                    </p>
+</div>
+<!-- Review 3 -->
+<div class="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm border border-primary/20">EL</div>
+<div>
+<h4 class="text-white font-medium text-sm">Emma Larson</h4>
+<div class="flex text-primary text-xs">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+</div>
+</div>
+<span class="ml-auto text-xs text-white/30">3 weeks ago</span>
+</div>
+<p class="text-white/70 text-sm leading-relaxed">
+                        I bought two for my dining table and they transformed the whole room. The modern rustic vibe is exactly what I was looking for.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Related Products -->
+<section class="mt-20 lg:mt-32 mb-10">
+<h3 class="text-2xl font-bold text-white mb-8">Frequently Bought Together</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Small round wooden side table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Ug1xv0k6QbbfMh8JtezUgjvgM6bXCRioM_OXxmEqQEkZ-Ffph6kC8eovBIEjNUFSmouA-r8f3jNxE1Xyq9OA7BkHfXiVxuDJFmbi1x-4kXXGlLVCRl1VCN9WWRKIJ1MqODSPHMTYkvZ6RYJLtqp3fIa1BK7yFUPz1dmr7pjTfNX_GcLGhAlWlZaCpDQRSCXThRADMg9vn_FWwrsjnTOPjfrWb6uW3xRDMo1TMjQaEZ69YCrJU47EHPGDI4WW-iOzbGv_hbgO3x8t"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<button class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-background-dark flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all shadow-lg hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="text-white font-medium group-hover:text-primary transition-colors">Round Side Table</h4>
+<p class="text-white/50 text-sm mt-1">$129.00</p>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern glass lamp with warm light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPa1vssWGW7eaDfa3hP18dv-lpZXUZJJZVFTU72DpaXblnZrVdiV5G2S1sCtMJ2ipeg8iBDbyesF92EniltorG59P1bjIkO42aMl_0EpxsciT75aKan7HrzIUbbt-805M3h-PlFMyeiMNdnT-Cvlshu9iv1Ahh2tVuEkMSw84PWawDfXtRwXLi-fAlW2BGbBgw4e0Jn99-uTiYU0BrCrg-frq3p5ibGzpTZh-jt3r2gOn0sKerYbf8ajtsXL5yTQVkMFKHo3YoOIpm"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<button class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-background-dark flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all shadow-lg hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="text-white font-medium group-hover:text-primary transition-colors">Amber Glass Lamp</h4>
+<p class="text-white/50 text-sm mt-1">$89.00</p>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Soft woven throw blanket in dark grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrHxjXQrj5hdnCeczw5JkdVB3JJEefbJRizMFRd8IUw8o-KcCLrwAemlWVncWM8IPmrlZ9t4DoPBD0zJbC6S3V4bsrU0Wawa2tSypG4JQNtbJd_0QM8gKL99jPvOLofpHbZtYshFn37KFQiiiEtPqK4kkf_vpkE2JzmVBM0_rIhptxxVCtOqIfJkgRPi3rbaGd-IFxQUkxVTGwtzwG0bGs_vhpX-nVDwotpgoIOCMpDx60Dug9s7ySR32AWRn_EDj_4pFBJN4ud7-G"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Sale</div>
+<button class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-background-dark flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all shadow-lg hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="text-white font-medium group-hover:text-primary transition-colors">Woven Throw Blanket</h4>
+<div class="flex gap-2 items-center mt-1">
+<p class="text-white/50 text-sm line-through">$59.00</p>
+<p class="text-primary text-sm font-bold">$45.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Minimalist dark vase with dried flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeuaC1DvsaHGUKDJLgXuz6x3n9q0XHzCprecirVfJwhLtc6QaeQ9oyeRoT-YjI3oQkvudwiaVbIsqhz-D9hFdkbo1n4J3tDweTnnZfrmU5oag-mGaa6rFGBzVeJpdlItpuEIXsyRmBhnoQdIS1125rchrxnkA7feZfyPS_d0Avl3PbdvcnLNkbtY_uvaMDQ7HnLisa0xvJ_xwEcwmsLOW0TVSMeo3TPHwZV5YoavfPNQE91GYRSNXyGffxl8vyqH5D6Xgj1tVOGgLc"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<button class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-background-dark flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all shadow-lg hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="text-white font-medium group-hover:text-primary transition-colors">Ceramic Ash Vase</h4>
+<p class="text-white/50 text-sm mt-1">$35.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-[#483323] bg-[#1a120b] pt-16 pb-8">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<div>
+<div class="flex items-center gap-2 text-white mb-6">
+<span class="material-symbols-outlined text-primary">local_fire_department</span>
+<span class="text-lg font-bold">Burnt &amp; Glass</span>
+</div>
+<p class="text-white/50 text-sm leading-relaxed mb-6">
+                        Elevating interiors with the raw beauty of burnt wood and the elegance of modern glass. Designed for the bold.
+                    </p>
+<div class="flex gap-4">
+<a class="size-8 rounded-full bg-[#483323] flex items-center justify-center text-white/70 hover:bg-primary hover:text-white transition-colors" href="#">
+<img alt="Instagram" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUTnqZDqg8KVlwn-zKJl9N_kPSRvz60QeeeKupv_Dyhp0pqbLaVkoP_883MDE_kbZnWe5lsymteR_kyapj7ulW-0t0QD6uk30RBg2Ii-ofyqfK_yiQ6ZRpi8A4aMJy_Z3s8wvvd4oQLzU7BxFOWWxgUdPuMpZ-ugzyJVLhZ8vtu6dnSR61kMuCZsf50gRPFEAvyRWbQKQ9ciTnS3eiUMfi_Zqxdp1ZBbOgWBUePzLqW3GWVAlKG9o-S5-q8YLjiNiASvwrc2q1qRKW"/>
+</a>
+<a class="size-8 rounded-full bg-[#483323] flex items-center justify-center text-white/70 hover:bg-primary hover:text-white transition-colors" href="#">
+<img alt="Twitter" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAobjlVRKotVjpKQPP8bKhMEugjJ-jpfMYAmzut3yfoEBi2lUVJMrnEqjcbc42ISjjWpEIlG9hf4_cFKUwutw_rd1xnZd5OWiGyxfm3CPlTCac1jW6YUR_fwWGKAHzuLfbnL4y5Tuwlvk9FIq7yZ45uGfzFfw84ckhWXWz0pIhderF2hG9mvZGK51laf0XFPhT06EZas5kul7deeQRAnncbbYyoKhoc7SNpS8zixsFkVXc_Xbx0n_pGD8ci6bKFEzIo4J78PKCwVqzO"/>
+</a>
+<a class="size-8 rounded-full bg-[#483323] flex items-center justify-center text-white/70 hover:bg-primary hover:text-white transition-colors" href="#">
+<img alt="Pinterest" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHScAhUIuCxyfNAPABlxXH55laAV_AFm3ttTeiOFeho9vBbXUY9XrKFM66OaKlqETZqNuDzoJBiPe_nT0PbMqh3Mi6uMPHzOEC00OnQ0UcCkNvwtL3GusRaW41lhbwAS5_7EVGL99tVwrR4laa1Gn70hee7eAaw74h7s16N1iFhLdK75t0H2dsrlNPBy0Irel1BjpZGdg3Iu6QzBZMuDuazl9_t1Rt4xcbK-JwTArDSeBY0fX8Q-2tNfUaC8zbkIJB3pGjg2v8g8ix"/>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Shop</h4>
+<ul class="space-y-4 text-sm text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Best Sellers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Furniture</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Decor</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sale</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Support</h4>
+<ul class="space-y-4 text-sm text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Stay in the loop</h4>
+<p class="text-white/50 text-sm mb-4">Subscribe to receive exclusive offers and design inspiration.</p>
+<form class="flex gap-2">
+<input class="bg-[#2d2016] border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white w-full focus:border-primary focus:ring-0 placeholder:text-white/30" placeholder="Your email" type="email"/>
+<button class="bg-primary hover:bg-[#ff7a1c] text-white px-4 py-2.5 rounded-lg transition-colors font-medium">
+                            Join
+                        </button>
+</form>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/30 text-xs">© 2025 Burnt &amp; Glass. All rights reserved.</p>
+<div class="flex gap-6">
+<img alt="Visa" class="h-6 opacity-50 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcGSIHhhY7Q0qSQpkxIqSC842xOXhDQQceSy-5PdaLPCcOVR2nbe0DFqsWTAr8t3vLXh3urnkn32c-yRY2phhnE2UurEhu9vuzcTbQQ2er_N2aRyw6SSbnUQR-kUjO5-ACBcn0SHHzSKhBEz2Hdwl2sSEa7U-Gg4QFtpeXzKAL37MDUiMFtCBNBRKx9OTNGNcLCKZcUwJMVy1MT5jFNp_3idXxmNo4-vJiNaef3A6wP8fuRcKC_HBz8XXJf9yszJOfPhvCx5ocZ0QP"/>
+<img alt="Mastercard" class="h-6 opacity-50 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt68IcZ1f21LaqCq3PuA048H_y3TMQCj1EavWDMxJs2f5iwEW_TInyTFbevMC_3MdqPq9DoW9ZTQDOMwtolCHvSq_Sux0srG3XJkfmdWReCHJ5SSvjIpMNgegkw9DSVO05YTHymyg1s5nFUhAC-IWE9FNrAIiwBOKgtacX0pmisIdrxbJSEQFjq0_No9ZkzOOIgehMp3hi6ppwpdStdRROvDS0N4QHRxbHPm9jcAoyYn8ISWAQm_6YEXKA0K5y637cEdINiitU9NDO"/>
+<img alt="PayPal" class="h-6 opacity-50 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATmgdqJXPV2COgRR0ZnnzwbmgkWAMMxIVYYykrnz8mOcbk3UBUKc28UrFyEzRKO8i4CaYAI5gykctFVSdbgrP2jkJ6yFrYPwRVHWhpujN0-W-1o2jrt4C6NIbldrnT3VgOOJvK-IVmiwJ2WUv6pKGZ7AFaH_h5DLwG4DoDukzqu4RJ8T2RwvrT46jXkxYvzNqfAOJOMtlGHdBENBIS5M2ugvz1lF421vkWrcseJm6nW_CMhJxhcJnQCWcuzH7hVywkxD0LfNjv2lpP"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

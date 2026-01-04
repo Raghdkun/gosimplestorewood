@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shop - Burnt &amp; Glass</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec6d13",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221811",
+                        "surface-dark": "#483323",
+                        "text-muted": "#c9a992",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221811; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #483323; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ec6d13; 
+        }
+        
+        /* Glassmorphism utility */
+        .glass-panel {
+            background: rgba(72, 51, 35, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-header {
+            background: rgba(34, 24, 17, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation -->
+<header class="glass-header sticky top-0 z-50 flex items-center justify-between whitespace-nowrap px-10 py-4 transition-all duration-300">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">local_fire_department</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-tight">Burnt &amp; Glass</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-text-muted hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">Shop</a>
+<a class="text-text-muted hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Collections</a>
+<a class="text-text-muted hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">About</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64 group">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full border border-white/10 focus-within:border-primary/50 transition-colors bg-surface-dark/50">
+<div class="text-text-muted flex items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-text-muted/70 px-4 pl-2 text-sm font-normal leading-normal" placeholder="Search products..." value=""/>
+</div>
+</label>
+<div class="flex gap-3">
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-surface-dark/50 hover:bg-primary/20 text-white transition-all border border-white/5 hover:border-primary/50">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</button>
+<button class="relative flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-surface-dark/50 hover:bg-primary/20 text-white transition-all border border-white/5 hover:border-primary/50">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full"></span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow layout-container flex flex-col items-center">
+<!-- Hero / Breadcrumb Area -->
+<div class="w-full max-w-[1440px] px-6 lg:px-10 py-8">
+<div class="glass-panel relative flex flex-col justify-center overflow-hidden rounded-2xl p-8 min-h-[200px] mb-8">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0 bg-cover bg-center opacity-40 mix-blend-overlay" data-alt="Abstract dark wooden texture with warm lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-2FtRgL2g29c6pYpOhKCIG7U-5du4TKMR_VBuORNwR3I3Bi9UTyzsiLnPqeU30K7ZAUJ8c2dT_8fr2ewXHIkrEUZ-AgMcD-tL1PTcSitRs3IyD4ULgpqrhwoz63yEdgTDVxy4ujwkdWAf-cTlaEUXffMHx9Dv-efBJKtTB0A4XPwZSdm9Se0Up5-IujMPJPei8BUwUaIjUF_pYVhZL-tcrE0iOI2o8UWpE8kgApBlDIUt7-zsNUKVwFOsevlr2gLl6TKqSYg-zWZ_');"></div>
+<div class="absolute inset-0 z-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent"></div>
+<div class="relative z-10 flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-2 text-sm text-text-muted mb-2">
+<span>Home</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-primary font-medium">Shop All</span>
+</div>
+<h1 class="text-4xl lg:text-5xl font-black tracking-tight text-white mb-2">
+                            Curated Living
+                        </h1>
+<p class="text-text-muted text-lg max-w-lg">
+                            Handcrafted pieces that blend the raw beauty of burnt wood with the elegance of glass.
+                        </p>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 items-start">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0 flex flex-col gap-6 sticky top-24 z-30">
+<!-- Filter Group: Categories -->
+<div class="glass-panel rounded-xl p-5 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="text-white font-bold text-base">Categories</h3>
+<span class="material-symbols-outlined text-text-muted text-[20px]">tune</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center size-5 rounded border border-surface-dark bg-background-dark group-hover:border-primary transition-colors">
+<input checked="" class="peer appearance-none absolute inset-0 w-full h-full cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[16px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="text-sm text-white/90 group-hover:text-primary transition-colors">All Products</span>
+<span class="ml-auto text-xs text-text-muted">124</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center size-5 rounded border border-surface-dark bg-background-dark group-hover:border-primary transition-colors">
+<input class="peer appearance-none absolute inset-0 w-full h-full cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[16px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="text-sm text-text-muted group-hover:text-white transition-colors">Furniture</span>
+<span class="ml-auto text-xs text-text-muted">45</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center size-5 rounded border border-surface-dark bg-background-dark group-hover:border-primary transition-colors">
+<input class="peer appearance-none absolute inset-0 w-full h-full cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[16px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="text-sm text-text-muted group-hover:text-white transition-colors">Lighting</span>
+<span class="ml-auto text-xs text-text-muted">32</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center size-5 rounded border border-surface-dark bg-background-dark group-hover:border-primary transition-colors">
+<input class="peer appearance-none absolute inset-0 w-full h-full cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[16px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="text-sm text-text-muted group-hover:text-white transition-colors">Decor</span>
+<span class="ml-auto text-xs text-text-muted">28</span>
+</label>
+</div>
+</div>
+<!-- Filter Group: Price -->
+<div class="glass-panel rounded-xl p-5 flex flex-col gap-4">
+<h3 class="text-white font-bold text-base">Price Range</h3>
+<div class="flex flex-col gap-6 pt-2">
+<div class="relative h-1 w-full rounded-sm bg-surface-dark">
+<div class="absolute left-[20%] right-[30%] h-full rounded-sm bg-primary"></div>
+<!-- Thumbs -->
+<div class="absolute top-1/2 left-[20%] size-4 -translate-y-1/2 -translate-x-1/2 rounded-full border-2 border-primary bg-background-dark shadow cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="absolute top-1/2 right-[30%] size-4 -translate-y-1/2 translate-x-1/2 rounded-full border-2 border-primary bg-background-dark shadow cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+<div class="flex items-center justify-between text-sm text-text-muted font-medium">
+<span>$120</span>
+<span>$2,400</span>
+</div>
+</div>
+</div>
+<!-- Filter Group: Colors -->
+<div class="glass-panel rounded-xl p-5 flex flex-col gap-4">
+<h3 class="text-white font-bold text-base">Finish</h3>
+<div class="flex flex-wrap gap-3">
+<button class="size-8 rounded-full bg-[#1a1a1a] border border-white/20 hover:scale-110 transition-transform ring-2 ring-transparent hover:ring-primary focus:ring-primary"></button>
+<button class="size-8 rounded-full bg-[#5d4037] border border-white/20 hover:scale-110 transition-transform ring-2 ring-transparent hover:ring-primary focus:ring-primary"></button>
+<button class="size-8 rounded-full bg-[#d7ccc8] border border-white/20 hover:scale-110 transition-transform ring-2 ring-transparent hover:ring-primary focus:ring-primary"></button>
+<button class="size-8 rounded-full bg-[#ec6d13] border border-white/20 hover:scale-110 transition-transform ring-2 ring-primary ring-offset-2 ring-offset-background-dark"></button>
+</div>
+</div>
+</aside>
+<!-- Main Grid -->
+<div class="flex-1 flex flex-col gap-6">
+<!-- Controls Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-white/10">
+<p class="text-text-muted text-sm">Showing <span class="text-white font-bold">1-9</span> of <span class="text-white font-bold">124</span> results</p>
+<div class="flex items-center gap-3">
+<div class="relative group">
+<button class="flex items-center gap-2 text-sm font-medium text-white bg-surface-dark/50 border border-white/10 px-4 py-2 rounded-lg hover:border-primary/50 transition-colors">
+<span>Sort by: Featured</span>
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+<div class="flex bg-surface-dark/50 rounded-lg p-1 border border-white/10">
+<button class="p-1.5 rounded bg-white/10 text-white">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</button>
+<button class="p-1.5 rounded text-text-muted hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Active Filters (Chips) -->
+<div class="flex flex-wrap gap-2">
+<button class="flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 pl-3 pr-2 py-1 text-xs font-medium text-primary hover:bg-primary/20 transition-colors">
+                                Furniture
+                                <span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<button class="flex items-center gap-2 rounded-full border border-white/10 bg-surface-dark pl-3 pr-2 py-1 text-xs font-medium text-text-muted hover:text-white hover:border-white/30 transition-colors">
+                                Price: $120-$2400
+                                <span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<button class="text-xs text-text-muted hover:text-primary underline ml-2">Clear all</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="glass-panel group relative flex flex-col overflow-hidden rounded-xl transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-[#1a1512]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Modern dark charcoal vase with textured surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfBUuGSIEmEHhBDplKwRIhS6fVjOkXixyQ9RHBeu0t3126kHv-4zW9QRwU4JTOmZlAQ5r31BrtM5lSE4MLduRN3vfbZocAntxr4pHk5W4S7BewPOM8SJo6h2-NKsaS4KQtL7tOtzZT0KuqbOrruSK57XrusLSv_WTEY7Yz2a_RAScn8M0Qq99xgwWF8tIewiCT50vrBdm0inpeFGJtlPniRADNKvYlFNFAoEj3_WkcIO9nOMfAyoD-BGuL8DoWemX6Q8V2xJJj_SyG');"></div>
+<!-- Badges -->
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2 py-1 bg-primary text-white text-[10px] font-bold uppercase tracking-wider rounded">New</span>
+</div>
+<!-- Favorite Action -->
+<button class="absolute top-3 right-3 flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<!-- Quick Add Overlay -->
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/90 to-transparent">
+<button class="w-full flex items-center justify-center gap-2 bg-white text-background-dark font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                            Add to Cart
+                                        </button>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-1">
+<p class="text-xs text-text-muted uppercase tracking-wide">Decor</p>
+<h3 class="text-lg font-bold text-white leading-tight group-hover:text-primary transition-colors">Obsidian Vase</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-lg font-medium text-white">$85.00</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="text-sm text-text-muted ml-1">4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel group relative flex flex-col overflow-hidden rounded-xl transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-[#1a1512]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist wooden chair with leather seat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfHVhd0Usj4o93rrz6EnR2udQJMrDcZtHJTdkVWsk8XPKHcWDadmHXmDGsjg2aoTZEj0ZvbKq-DCyWSxkNuceQUKBxa6eOh-JtESILifvoPkqCRFzBi2WPoZxfLlMRkiuNYs0va739xOi-F0FReuozKV2KN_bjXyxQSxtFu_ZMwlxI36Y1I3VKMhVRfVH4ypEb4xFoIypZgDMqGP7ae9APBO0viN_GhkPJf0UCOnnWkBEGBjwUH9N99wP6FnjANIfeBCXhW_BUnaVS');"></div>
+<button class="absolute top-3 right-3 flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/90 to-transparent">
+<button class="w-full flex items-center justify-center gap-2 bg-white text-background-dark font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                            Add to Cart
+                                        </button>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-1">
+<p class="text-xs text-text-muted uppercase tracking-wide">Furniture</p>
+<h3 class="text-lg font-bold text-white leading-tight group-hover:text-primary transition-colors">Ashwood Lounge Chair</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-lg font-medium text-white">$420.00</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="text-sm text-text-muted ml-1">4.8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel group relative flex flex-col overflow-hidden rounded-xl transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-[#1a1512]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Amber glass pendant light hanging in dark room" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOms9lHD4Z3QJamduaNkynIyGtR8mxnS24ASa_sM-p249I5Rh6nh5Is-zSgBjl0AhaInNNyYZd2BqOMEO_QOS--bVVMv06jHPTko0kwqq921n3oWYIOIkP9j78CIt0yPL_EN0fbS-mBS7Jb_U5uMrydMpdg6PopsC6vEbEcWPA8rF5R-nkuizrOgSy3x8beK6JSaxPQN2MGgfu0CU6h9scUbdwMQjh1hOeaqIhwJp9PkpOe8mT8be4_F2BCphaL0BO0yqNruWYWN4d');"></div>
+<button class="absolute top-3 right-3 flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/90 to-transparent">
+<button class="w-full flex items-center justify-center gap-2 bg-white text-background-dark font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                            Add to Cart
+                                        </button>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-1">
+<p class="text-xs text-text-muted uppercase tracking-wide">Lighting</p>
+<h3 class="text-lg font-bold text-white leading-tight group-hover:text-primary transition-colors">Amber Pendant</h3>
+<div class="flex items-center justify-between mt-1">
+<div class="flex flex-col">
+<span class="text-xs text-primary line-through opacity-70">$180.00</span>
+<span class="text-lg font-medium text-white">$145.00</span>
+</div>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="text-sm text-text-muted ml-1">5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="glass-panel group relative flex flex-col overflow-hidden rounded-xl transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-[#1a1512]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Dark aesthetic living room setup with coffee table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUArwAQWaEEANTAPAQLyTRNo8K2uW4e7OSwDGsCn213EB1tvk9Kh79Auf96PFcuXMgkhy7NSHM0_046j4RkM8E7isHjZW8xzPzSHXOfxfrbSKag6dxES12EwrIJKrKp2B6AffTnH3Xn4vBWP9PKrLiwNbZ9bFAaE3RH87klHpRf69w41hLplWBBT08fOkZPRfFGN2opSsey6vfpQBqfciFsZ2V5UjIMoELO7KblvfnNI-YznEEI4oKn6ccLNBn2CrFT3omQ8QrMJNx');"></div>
+<button class="absolute top-3 right-3 flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/90 to-transparent">
+<button class="w-full flex items-center justify-center gap-2 bg-white text-background-dark font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                            Add to Cart
+                                        </button>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-1">
+<p class="text-xs text-text-muted uppercase tracking-wide">Furniture</p>
+<h3 class="text-lg font-bold text-white leading-tight group-hover:text-primary transition-colors">Noir Coffee Table</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-lg font-medium text-white">$310.00</span>
+<div class="flex items-center gap-0.5 text-text-muted">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="text-sm ml-1">--</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="glass-panel group relative flex flex-col overflow-hidden rounded-xl transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-[#1a1512]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist candle holder on burnt wood table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA79dDGhdWtP64-mfCC2p4yvNiChvFranSsKv372hfYav0aNmJ2MjvYe_oeFsCJ5h_n-nT37zJQCk-0BPVFZlwTbkpfQTyPiv3ZbP934ciAoWVOm8VzZk7NMDhwABETg-XQbroxNN-G_mxg96cRAiugXat12zTHUx2ngGnD3HDicZ9D-KY5S7lhAbSKKx4cr3ejD7EoBOYnEATPlQL2nfsMkOZDl7u8AaD2_ErpLjBNVmlwJmlmTBa3RjnFqt6AqDa406okDhvF0wzq');"></div>
+<button class="absolute top-3 right-3 flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/90 to-transparent">
+<button class="w-full flex items-center justify-center gap-2 bg-white text-background-dark font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                            Add to Cart
+                                        </button>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-1">
+<p class="text-xs text-text-muted uppercase tracking-wide">Decor</p>
+<h3 class="text-lg font-bold text-white leading-tight group-hover:text-primary transition-colors">Iron Candle Holder</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-lg font-medium text-white">$45.00</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="text-sm text-text-muted ml-1">4.7</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="glass-panel group relative flex flex-col overflow-hidden rounded-xl transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-[#1a1512]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Set of smoked glass cups" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAW7Epl3o1lzZY8iXr4jR3drkHmCE9sYCfT0asut4mEPvWYfVH37QNkzm3v3VXbn4Jvtc1CF7q53Y55yDosrEvnLWgcQ00J0hVT6gGGNCcS0z0Nn1nAtTvlxkwazffSlhycgzkkfLryIhNC6j2tk_SbBHVllfh4CYVPeU6svW-659hh8TZOSRJSEh-Be-xq30MxHrx831CovNUBLiEtKotuhtbLp24MGLaOyHZO6BAriuyzylDes-NyQDZyVqNpw0KhxgPyYGMof7bf');"></div>
+<button class="absolute top-3 right-3 flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/90 to-transparent">
+<button class="w-full flex items-center justify-center gap-2 bg-white text-background-dark font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                                            Add to Cart
+                                        </button>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-1">
+<p class="text-xs text-text-muted uppercase tracking-wide">Kitchen</p>
+<h3 class="text-lg font-bold text-white leading-tight group-hover:text-primary transition-colors">Smoked Glass Set</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-lg font-medium text-white">$60.00</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="text-sm text-text-muted ml-1">4.5</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center gap-2 mt-10 pb-10">
+<button class="size-10 flex items-center justify-center rounded-lg bg-surface-dark border border-white/10 text-text-muted hover:bg-primary hover:text-white hover:border-primary transition-all disabled:opacity-50">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold shadow-lg shadow-primary/20">1</button>
+<button class="size-10 flex items-center justify-center rounded-lg bg-surface-dark border border-white/10 text-white hover:bg-white/10 transition-all">2</button>
+<button class="size-10 flex items-center justify-center rounded-lg bg-surface-dark border border-white/10 text-white hover:bg-white/10 transition-all">3</button>
+<span class="text-text-muted">...</span>
+<button class="size-10 flex items-center justify-center rounded-lg bg-surface-dark border border-white/10 text-text-muted hover:bg-primary hover:text-white hover:border-primary transition-all">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-white/10 bg-[#150f0b]">
+<div class="layout-container flex flex-col items-center px-10 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 w-full max-w-[1440px]">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary">local_fire_department</span>
+<h3 class="text-lg font-bold">Burnt &amp; Glass</h3>
+</div>
+<p class="text-text-muted text-sm leading-relaxed">
+                            Redefining modern living with elemental textures and refined transparency.
+                        </p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Shop</h4>
+<ul class="flex flex-col gap-2 text-sm text-text-muted">
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Furniture</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Lighting</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Decor</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Support</h4>
+<ul class="flex flex-col gap-2 text-sm text-text-muted">
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Care Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Stay Connected</h4>
+<div class="flex flex-col gap-3">
+<div class="flex w-full items-stretch rounded-lg bg-surface-dark border border-white/10">
+<input class="flex-1 bg-transparent border-none text-white text-sm px-4 focus:ring-0 placeholder:text-text-muted/50" placeholder="Email address"/>
+<button class="px-4 text-primary hover:text-white font-medium transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="flex gap-4 mt-2">
+<a class="text-text-muted hover:text-primary transition-colors" href="#"><span class="text-xs">INSTAGRAM</span></a>
+<a class="text-text-muted hover:text-primary transition-colors" href="#"><span class="text-xs">PINTEREST</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-[1440px] mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-text-muted/60">
+<p>© 2025 Burnt &amp; Glass. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
